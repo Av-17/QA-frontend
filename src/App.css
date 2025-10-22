@@ -1,0 +1,115 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a1a; /* Darker background */
+  color: #e0e0e0; /* Lighter text */
+}
+
+.app-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  width: 100%;
+  max-width: 800px; /* Limit max width for better readability */
+  margin: 0 auto; /* Center the app */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+  background-color: #252525; /* Slightly lighter background for the app */
+  overflow: hidden; /* Prevent content from spilling out */
+}
+
+.app-container h1 {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #00aaff; /* Brighter, more modern blue */
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333; /* Darker input area */
+  border-top: 1px solid #444; /* Separator line */
+}
+
+.input-field {
+  flex-grow: 1;
+  background-color: #444;
+  color: #e0e0e0;
+  border: 1px solid #555;
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: #00aaff;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: #00aaff;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-button:disabled {
+  color: #555;
+  cursor: not-allowed;
+}
+
+.file-upload-status {
+  color: #00aaff;
+  margin: 0 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    max-width: 100%;
+    height: 98vh;
+    box-shadow: none;
+  }
+
+  .app-container h1 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .input-container {
+    padding: 0.5rem;
+  }
+
+  .input-field {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .icon-button {
+    font-size: 1.2rem;
+  }
+}
