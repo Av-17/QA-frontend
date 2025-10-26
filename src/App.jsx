@@ -21,7 +21,7 @@ function App() {
         const formData = new FormData();
         formData.append('question', input);
 
-        const response = await fetch('http://127.0.0.1:8000/ask', {
+        const response = await fetch('https://recorder-donna-franklin-vol.trycloudflare.com/ask', {
           method: 'POST',
           body: formData,
         });
@@ -54,7 +54,7 @@ function App() {
           formData.append('files', file);
         });
 
-        const response = await fetch('http://127.0.0.1:8000/upload', {
+        const response = await fetch('https://recorder-donna-franklin-vol.trycloudflare.com/upload', {
           method: 'POST',
           body: formData,
         });
