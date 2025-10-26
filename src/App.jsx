@@ -21,7 +21,7 @@ function App() {
         const formData = new FormData();
         formData.append('question', input);
 
-        const response = await fetch('https://qa-backend-1-5z9d.onrender.com/ask', {
+        const response = await fetch('http://127.0.0.1:8000/ask', {
           method: 'POST',
           body: formData,
         });
@@ -54,7 +54,7 @@ function App() {
           formData.append('files', file);
         });
 
-        const response = await fetch('https://qa-backend-1-5z9d.onrender.com/upload', {
+        const response = await fetch('http://127.0.0.1:8000/upload', {
           method: 'POST',
           body: formData,
         });
