@@ -21,7 +21,7 @@ function App() {
         const formData = new FormData();
         formData.append('question', input);
 
-        const response = await fetch('https://recorder-donna-franklin-vol.trycloudflare.com/ask', {
+        const response = await fetch('https://weapon-enterprises-sagem-node.trycloudflare.com/ask', {
           method: 'POST',
           body: formData,
         });
@@ -54,7 +54,7 @@ function App() {
           formData.append('files', file);
         });
 
-        const response = await fetch('https://recorder-donna-franklin-vol.trycloudflare.com/upload', {
+        const response = await fetch('https://weapon-enterprises-sagem-node.trycloudflare.com/upload', {
           method: 'POST',
           body: formData,
         });
